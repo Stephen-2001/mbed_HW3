@@ -1,17 +1,17 @@
 ## mbed_HW3
 
 ### 1. How to set up our program
-##### (1) move to the directory
-  `cd ~/ee2405/mbed_HW3/src/model_deploy`
-##### (2) compile the main.cpp
-  `sudo mbed compile --source . --source ~/ee2405new/mbed-os-build2/ -m B_L4S5I_IOT01A -t GCC_ARM --profile tflite.json -f`
-##### (3) Open the screen 
-  `sudo screen /dev/ttyACM0`
-##### (4) Open another terminal
-##### (5) move to the directory
-  `cd ~/ee2405/mbed_HW3/src/model_deploy/wifi_mqtt`
-##### (6) compile the mqtt_client.py
-  `sudo python3 mqtt_client.py`
+  ##### (1) move to the directory
+    `cd ~/ee2405/mbed_HW3/src/model_deploy`
+  ##### (2) compile the main.cpp
+    `sudo mbed compile --source . --source ~/ee2405new/mbed-os-build2/ -m B_L4S5I_IOT01A -t GCC_ARM --profile tflite.json -f`
+  ##### (3) Open the screen 
+    `sudo screen /dev/ttyACM0`
+  ##### (4) Open another terminal
+  ##### (5) move to the directory
+    `cd ~/ee2405/mbed_HW3/src/model_deploy/wifi_mqtt`
+  ##### (6) compile the mqtt_client.py
+    `sudo python3 mqtt_client.py`
 
 ### 2. What are the results
 ##### (1) Compile commend
