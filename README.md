@@ -1,14 +1,21 @@
 ## mbed_HW3
 
-### How to set up our program
+### 1. How to set up our program
 
-### What are the results
-##### Compile commend
+### 2. What are the results
+##### (1) Compile commend
   `sudo mbed compile --source . --source ~/ee2405new/mbed-os-build2/ -m B_L4S5I_IOT01A -t GCC_ARM --profile tflite.json -f`
-##### After compile, open the screen 
+##### (2) After compile, open the screen with the commend 
   `sudo screen /dev/ttyACM0`
-##### When we type /1/run on the screen, RPC call the gesture mode and LED1 will turn on
-
+##### (3) When we type /1/run on the screen, RPC call the gesture mode and LED1 will turn on
 ###### When the mbed sense the gesture, the angle-threshold will +5 degree. If it arrives 180 degree, it will turn back to 30 degree.
 
-##### Press the userbutton to determine the threshold angle and send the event to broker
+##### (4) Press the userbutton to determine the threshold angle and send the event to broker
+
+##### (5) When we type /2/run on the screen, RPC call the tile_angle_detect mode and LED2 will turn on
+###### The mode will turn on the LED3 for 3 second to remind the user keeps the mbed board flat for measuring the reference gravity value.
+###### Then restore the reference value into ref_pDataXYZ
+###### After LED3 turn off, it means we can start tilting the board and keep measuring the tilt angle per 50ms
+###### If the angle is greaater than the threshold angle for 10 times continously, the angle detect function will turn off and send the events to python by MQTT
+
+##### (6) Python will receive the 10 events that the tilt angle is greater than the threshold angle at ten times measurement continuously. 
