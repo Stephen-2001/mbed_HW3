@@ -16,6 +16,7 @@
 ###### The mode will turn on the LED3 for 3 second to remind the user keeps the mbed board flat for measuring the reference gravity value.
 ###### Then restore the reference value into ref_pDataXYZ
 ###### After LED3 turn off, it means we can start tilting the board and keep measuring the tilt angle per 50ms
+###### The tilt angle which is the angle between present vector and the reference vector is calculated by the law of cosine.
 ###### If the angle is greaater than the threshold angle for 10 times continously, the angle detect function will turn off and send the events to python by MQTT
 
 ##### (6) Python will receive the 10 events that the tilt angle is greater than the threshold angle at ten times measurement continuously. 
