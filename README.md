@@ -20,6 +20,7 @@
   `sudo screen /dev/ttyACM0`
 ##### (3) When we type /1/run on the screen, RPC call the gesture mode and LED1 will turn on
 ###### When the mbed sense the gesture, the angle-threshold will +5 degree. If it arrives 180 degree, it will turn back to 30 degree.
+###### The angle will show on the uLCD.
 
 ##### (4) Press the userbutton to determine the threshold angle and send the event to broker
 
